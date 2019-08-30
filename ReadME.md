@@ -1,12 +1,12 @@
-# Pig Dice    
+# Address Book 2.0  
 
-#### Pizza Menu Created Aug 30th 2019
+#### Address Book 2.0 created august 26th 2019
 
-##### Hailey Gaylor
+##### By Mike McShane & Hailey Gaylor
 
 ## Description
 
-* This project will demonstrate use of objects and constructors with prototypes. The function of this project will to be able take the users input of a order and give back a price
+* This project is to create a address book allowing new contacts to be created with javascript prototypes and constructors.
 
 ## Setup/Installation Requirements
 
@@ -14,12 +14,12 @@
 
 ## Specifications
 
-* options will show with different pizzas and prices with additional add ons. User will be able to select and submit an order.
+* It will take the users inputed contact information and store them as a contact in the address book.
 
-* **Example Input:** Red sauce, thick crust, all meat.
-* **Example Output:** $20 with no additions.
+* **Example Input:** First Name, Last Name,  Phone number.
+* **Example Output:** Ada, Lovelace, 503-555-0100
 
-
+* It will add the contact by first name, last name and phone number.
 
 
 ## Known Bugs
@@ -28,9 +28,11 @@
 
 ## Support and contact details
 
-#### If there are any issues please contact me at haileygaylor@gmail.com
+#### If there are any issues please contact me at mmcshane10@gmail.com or haileygaylor@gmail.com
 ## Technologies Used
 
-#### HTML, CSS, JavaScript, JQuery.
+#### HTML, CSS, JavaScript, JQuery
 
-### License: Pending Job to pay for the License.
+### License
+
+Copyright (c) 2019 **_Mike McShane/Hailey Gaylor_**
