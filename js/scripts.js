@@ -1,99 +1,59 @@
-// Business Logic for AddressBook ---------
-function AddressBook() {
-  this.contacts = [],
-  this.currentId = 0
-}
+//Business Logic----------
 
-AddressBook.prototype.addContact = function(contact) {
-  contact.id = this.assignId();
-  this.contacts.push(contact);
-}
+var order=function () {
+  this.total="buildYourOwn"+"addOns"+"specials";
 
-AddressBook.prototype.assignId = function() {
-  this.currentId += 1;
-  return this.currentId;
-}
-
-AddressBook.prototype.findContact = function(id) {
-  for (var i=0; i< this.contacts.length; i++) {
-    if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        return this.contacts[i];
-      }
-    }
-  };
-  return false;
-}
-
-AddressBook.prototype.deleteContact = function(id) {
-  for (var i=0; i< this.contacts.length; i++) {
-    if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        delete this.contacts[i];
-        return true;
-      }
-    }
-  };
-  return false;
-}
-
-// Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber) {
-  this.firstName = firstName,
-  this.lastName = lastName,
-  this.phoneNumber = phoneNumber
-}
-
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
-}
-
-// User Interface Logic ---------
-var addressBook = new AddressBook();
-
-function displayContactDetails(addressBookToDisplay) {
-  var contactsList = $("ul#contacts");
-  var htmlForContactInfo = "";
-  addressBookToDisplay.contacts.forEach(function(contact) {
-    htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
-  });
-  contactsList.html(htmlForContactInfo);
 };
+var basic = 9;
 
-function showContact(contactId) {
-  var contact = addressBook.findContact(contactId);
-  $("#show-contact").show();
-  $(".first-name").html(contact.firstName);
-  $(".last-name").html(contact.lastName);
-  $(".phone-number").html(contact.phoneNumber);
-  var buttons = $("#buttons");
-  buttons.empty();
-  buttons.append("<button class='deleteButton' id=" + contact.id + ">Delete</button>");
+var addOns = function(){
+  this.breadSticks === "$4.50";
+  this.cinnaSticks === "$3.50"
+  this.cheesyBread === "$5.50"
+    if("input:radio[name=bread-sticks]:checked") return true;
+
 }
 
-function attachContactListeners() {
-  $("ul#contacts").on("click", "li", function() {
-    showContact(this.id);
-  });
-  $("#buttons").on("click", ".deleteButton", function() {
-    addressBook.deleteContact(this.id);
-    $("#show-contact").hide();
-    displayContactDetails(addressBook);
-  });
-};
+var buildYourOwn = function(){
+  this.cheese === 9.50;
+  this.allMeats === 15.5;
+  this.redSauce === 0;
+  this.whiteSauce === 0;
+  this.thinCrust === 0;
+  this.thickCrust=== 0;
+  this.stuffedCrust === 2;
+  this.allVeggie === 12.50;
+  
+    if("input:radio[name=bread-sticks]:checked") return + basic;
+
+}
+
+var specials = function(){
+  this.meat === "$4.50";
+  this.hawaian === "$3.50"
+  this.veggie === "$5.50"
+    if("input:radio checked") return true;
+
+}
+
+// var cinnaSticks =
+// var cheesyBread =
+
 
 $(document).ready(function() {
-  attachContactListeners();
-  $("form#new-contact").submit(function(event) {
+  $("form#pizzaOrder").submit(function() {
     event.preventDefault();
-    var inputtedFirstName = $("input#new-first-name").val();
-    var inputtedLastName = $("input#new-last-name").val();
-    var inputtedPhoneNumber = $("input#new-phone-number").val();
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input#new-phone-number").val("");
-    var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
-    addressBook.addContact(newContact);
-    displayContactDetails(addressBook);
-  })
-})
+    var breadSxticks = $("input:radio[name=bread-sticks]:checked").val();
+    var cinnaSticks= $("input:radio[name=cinna-sticks]:checked").val();
+    var cheesyBread = $("input:radio[name=cheesy-bread]:checked").val();
+
+
+    $("#character").empty().append(character);
+    $("#result").show();
+// establish variables for the pizza (function) var for the topings, crust, sauce with arrays that include prices.
+
+//var crustOptions = fucntion(crust) {
+  //this.crust = ("stuffed","Thin","")
+  });
+// Variable for additional add ons,. write a function to clear the settings of the menu.
+});
