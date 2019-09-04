@@ -1,19 +1,23 @@
 function Pizza(order) {
-  this.toppings=order;
+  var total =0;
 }
 
 
 
-Pizza.prototype.toppings= function(){
-  var pep = "15" ;
-  var cheese = "13";
-  var veggie = "14";
-    if(pep === true || cheese === true|| veggie=== true) {
-      return ("Pizza cost 15 ")
-    } else {
-      alert("Please select a topping");
-    }
-}
+Pizza.prototype.size= function(){
+  var small = 0;
+  var medium = 0;
+  var large = 0;
+  // if (small.checked) {
+  //   total === 10;
+  // } else if (medium .checked) {
+  //       total === 12;
+  //   } else if(large.checked) {
+  //       total === 14;
+  //   } else {
+      alert("Your Pizza cost 15");
+
+};
 
 
 
@@ -23,14 +27,10 @@ Pizza.prototype.toppings= function(){
 $(document).ready(function() {
   $("form#pizzaOrder").submit(function() {
     event.preventDefault();
-    var newPizza = new Pizza($("input:radio:checked").val()) ;
-    var topping = toppings;
+    var newPizza = new Pizza() ;
 
-
-
-
-    $(newPizza.toppings);
-    $("btnsubmit#orderBtn").text(".yourOrder" + " "+ "$15");
+    $ (newPizza.size);
+    $("btnsubmit#orderBtn").text(".yourOrder" + newPizza)
 
   });
 });

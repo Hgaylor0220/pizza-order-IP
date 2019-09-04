@@ -17,45 +17,40 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </head>
     <body>
-    <!-- <image src= "https://halfbuckcafe.com/wp-content/uploads/2018/12/00069a3e9dbb11e88ea30e92b056efc0.jpeg"> -->
+
       <div class="jumbotron text-center">
-        <h1>Pizza Menu</h1>
-        <p>Order Now!</p>
+          <h1>Pizza Menu</h1>
+          <p>Order Now!</p>
       </div>
-      <form id="pizzaOrder">
-        <div class="container">
-          <div class="col-sm-6">
-            <div class="row" id= "size">
-              <h2>
-                <p>Size</p>
-              <label>Small</label>
-              <input type="radio" name="size"> <br>
-              <label>Medium</label>
-              <input type="radio" name="size"> <br>
-              <label>Large</label>
-              <input type="radio" name="size">
-              </h2>
-            </div>
-          <div class="col-6">
-            <div class="row" id="toppings">
-              <h2>
-              <p>Toppings</p>
-                <label> Cheese</label>
-                <input type="radio" name="cheese" value="cheese"> <br>
-                <label>Pepperoni</label>
-                <input type="radio" name="allMeats" value="pep"> <br>
-                <label>Vegetarian</label>
-                <input type="radio" name="redSauce" value="veggie ">
-              </h2>
-            </div>
-          </div>
-            <div class="order">
-                  <button id ="orderBtn" type="submit" name="button">Place Order</button>
+
+        <form id="pizzaOrder">
+          <div class="container">
+            <div class="jumbotron">
+              <img src="IMG/pizza.jpg" class="img-thumbnail" alt="pizza">
+                <h2>
+                  <p>Size</p>
+                <label>Small</label>
+                <input type="radio" name="size"> <br>
+                <label>Medium</label>
+                <input type="radio" name="size"> <br>
+                <label>Large</label>
+                <input type="radio" name="size">
+
+                <p>Toppings</p>
+                  <label> Cheese</label>
+                  <input type="radio" name="cheese" value="toppings"> <br>
+                  <label>Pepperoni</label>
+                  <input type="radio" name="allMeats" value="toppings"> <br>
+                  <label>Vegetarian</label>
+                  <input type="radio" name="redSauce" value="toppings ">
+                </h2>
+
+              <div class="order">
+                    <button class="btn btn-primary btn-block" id ="orderBtn" type="submit" name="button">Place Order</button>
+                  </div>
+                <div id="orderDetail"><p><span type="text" class="yourOrder"></span>
                 </div>
-              <div id="orderDetail">
-                  <p> Your pizza order comes to <span type="text" class="yourOrder"></span></p>
-              </div>
-          </div>
+            </div>
         </div>
     </form>
   </body>
