@@ -1,38 +1,17 @@
-function Pizza(size,toppings) {
+function Pizza(size,toppings,cost) {
   this.size = size;
   this.toppings = toppings;
+  this.cost= cost;
 }
 
 Pizza.prototype.pizzaSelection1 = function(customerPizzaToppings) {
-  if(this.toppings === "cheese"){
-      return  13;
-  } else if (this.toppings === "pepperoni") {
-      return  15;
-  } else (this.toppings === "vegetarian")
-      return  16;
+  if(this.toppings === "Cheese"){
+      return (this.cost = 13);
+  } else if (this.toppings === "Pepperoni") {
+      return  (this.cost = 14);
+  } else (this.toppings === "Vegetarian")
+      return  (this.cost = 16);
 }
-
-
-
-// Pizza.prototype.size = function (customerPizzaSize) {
-//   var sizeCost= 0;
-//   if(this.size === "small"){
-//       sizeCost = 8;
-//   } else if (this.size === "medium") {
-//       sizeCost = 12;
-//   } else (this.size === "large")
-//       sizeCost = 14;
-// };
-
-
-// Pizza.prototype.cost = function (pizzaCost) {
-//   return 'sizeCost' + 'toppingCost';
-// };
-
-
-
-
-
 
 // UI Logic ------------------
 
@@ -44,10 +23,15 @@ $(document).ready(function() {
     var newPizza = new Pizza(customerPizzaSize,customerPizzaToppings);
 
 
-    console.log(this.toppings);
-      newPizza.pizzaSelection1();
-    //
-    $("btnsubmit#orderBtn").text("#orderDetail" + newPizza);
+// Submiting the new pizza to the user with the price selected.
+    newPizza.pizzaSelection1();
+    console.log(newPizza);
+
+    $(".yourOrder").text(newPizza.pizzaSelection1());
+    $(".confirm").text(customerPizzaSize + " " + customerPizzaToppings);
+
+
+
 
   });
 

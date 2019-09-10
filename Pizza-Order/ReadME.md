@@ -14,17 +14,29 @@
 
 ## Specifications
 
+
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+| User can select pizza size | 'small, medium, large' | 'small, medium, large' |
+|  User can select pizza topping.  | cheese, pepperoni, vegetarian | cheese =13 , pepperoni = 14, vegetarian =16 |
+| User can submit the order | 'submit' | order total will display to the user based on choice |
+
+
+
+
+
+
 * You will be able to select a pizza size and toppings to associate with the pizza. based off of your selection upon submit a price will show.
 
-* **Example Input:** Red sauce, thick crust, all meat.
-* **Example Output:** $20 with no additions.
+* **Example Input:** small, cheese.
+* **Example Output:** $13.
 
 
 
 
 ## Known Bugs
 
-* Price is not associating with the submit function. Work in processes
+* no matter what size the pizza price will remain the same. 
 
 ## Support and contact details
 
